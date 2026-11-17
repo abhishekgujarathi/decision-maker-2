@@ -1,0 +1,2 @@
+{"timestamp_utc": "2026-11-17T18:04:52.315010+00:00", "task": "TASK-HOOK-001", "status": "complete", "note": "Created empty post-task loop hook template and documented invocation."}
+{"timestamp_utc": "2026-11-17T18:05:49.353696+00:00", "task": "TASK-HOOK-ACTIVATION", "status": "complete", "note": "Documented /hook activation semantics: invoke after each discrete prompt task reaches a terminal state."}

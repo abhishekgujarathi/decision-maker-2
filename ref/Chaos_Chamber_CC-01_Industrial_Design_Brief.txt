@@ -1,0 +1,657 @@
+# CHAOS CHAMBER CC-01
+## Industrial Product Design, Mechanical Architecture & 3D Production Brief
+
+**Document purpose:** A production-ready design brief for reconstructing the original glass-fronted S-track Chaos Chamber as a believable physical product, then modelling, rigging, animating and rendering it in Blender, Maya or Three.js.
+
+**Primary reference:** The user's original image of the vertical, glass-fronted machine with dark wooden side panels, a silver frame, visible S-shaped internal track and compact lower mechanism.
+
+**Important design distinction:** This brief describes the original S-track machine, not the later spherical lottery tumbler concept.
+
+---
+
+# 1. Product identity and design direction
+
+**Product name:** CHAOS CHAMBER  
+**Model number:** CC-01  
+**Product category:** Tabletop electromechanical decision apparatus  
+**Design language:** Mid-century scientific instrument combined with modern precision engineering.
+
+The Chaos Chamber is a vertical, glass-fronted mechanical decision machine. A single polished steel ball enters at the top, travels through a descending stainless-steel S-track, reaches a two-way mechanical selector, and exits through one of two physical result channels: YES or NO.
+
+The machine should feel like a premium manufactured industrial instrument—not a toy, fantasy prop, random collection of gears or decorative steampunk sculpture.
+
+Its visual identity comes from four key characteristics:
+
+1. Dark walnut side panels that give the product warmth.
+2. A brushed-metal structural frame that communicates precision engineering.
+3. A large transparent front glass panel exposing the mechanism.
+4. A distinctive descending S-shaped metal ball track that forms the visual signature.
+
+All components should have a believable manufacturing purpose.
+
+# 2. Real-world mechanical design principles
+
+Use real mechanical references for construction and movement, rather than copying decorative styling.
+
+Relevant reference categories:
+- Gravity-fed ball tracks and marble-run mechanisms.
+- Single-ball escapements and ball-retention gates.
+- Pinball-style ball guides and troughs.
+- Two-way mechanical diverters.
+- Small industrial actuators, bearings, pivots and linkages.
+- Glass-fronted scientific instruments and precision cabinets.
+
+Engineering principles:
+- The ball path must be continuous, supported and constrained.
+- Gravity should drive the ball along the descending track.
+- Gates must retain or release the ball through physically plausible movement.
+- A selector must have two stable positions.
+- The selected ball must travel through the chosen physical output path.
+- Every moving component must have a functional reason to move.
+
+# 3. Overall product dimensions
+
+The original reference image is low resolution, so the following are proposed design targets based on its proportions. They are not measurements extracted from the image.
+
+| Parameter | Proposed dimension |
+|---|---:|
+| Overall width | 420 mm |
+| Overall height | 730 mm |
+| Overall depth | 250 mm |
+| Walnut side panel thickness | 18 mm |
+| Front glass thickness | 4 mm |
+| Structural metal frame | approximately 20 × 20 mm |
+| Main visible chamber | approximately 360 × 545 mm |
+| Lower mechanical base | approximately 115 mm high |
+| Upper header | approximately 60 mm high |
+| Ball diameter | 18 mm |
+| Track internal width | 22–24 mm |
+| Track side-wall height | 8–12 mm |
+| Track bend radius | 26–32 mm |
+
+All dimensions should be validated during CAD blockout and may be adjusted to preserve clearances and visual proportions.
+
+## 3.1 Coordinate system
+
+Use millimetres and one consistent object coordinate system.
+
+- X: left to right.
+- Y: bottom to top.
+- Z: back to front.
+- Front viewing direction: positive Z.
+- Object origin: centre of the bottom chassis.
+
+Approximate envelope:
+
+```text
+X: -210 mm to +210 mm
+Y:    0 mm to +730 mm
+Z: -125 mm to +125 mm
+```
+
+The tabletop, wall and circular wall light are environmental elements, not part of the product model.
+
+# 4. Exterior construction
+
+The exterior should be straightforward, physically plausible and manufacturable.
+
+## 4.1 Left and right side panels
+
+Two dark walnut side panels:
+
+- 18 mm nominal thickness.
+- Walnut veneer with vertical grain direction.
+- Satin clear-coated finish.
+- Slightly rounded external edges, approximately 2 mm radius.
+- Concealed internal mounting points.
+- Flush alignment with the metal front frame.
+- Natural differences in grain between left and right panels.
+
+The panels should look like finished furniture-grade wood, not orange plastic or a flat brown texture.
+
+## 4.2 Structural metal frame
+
+The front frame consists of:
+
+- Two vertical metal posts.
+- One upper horizontal cross-member.
+- One lower horizontal cross-member.
+
+Material: brushed stainless steel or satin-finished aluminium.
+
+Include believable:
+- M3/M4 screws.
+- Countersunk mounting holes.
+- Small joining brackets.
+- Recessed fasteners.
+- Machined corner joints.
+
+Avoid excessively thick metallic borders. The glass and internal track should remain visually dominant.
+
+## 4.3 Front glass
+
+A single large transparent front glass panel:
+
+- 4 mm low-iron tempered glass.
+- Four-sided black EPDM sealing gasket.
+- Metal retainers.
+- Small mounting screws.
+- Realistic visible edge thickness.
+- Subtle reflections, not mirror-like reflections.
+
+Design the front access as a left-side hinged panel, using two compact concealed hinges and a lockable quarter-turn latch on the right. The glass stays closed during normal operation.
+
+## 4.4 Upper fascia
+
+A compact horizontal header at the top of the machine, with a small engraved metal nameplate:
+
+**CHAOS CHAMBER**
+
+Branding should be discreet, not oversized.
+
+## 4.5 Lower chassis
+
+The bottom 115 mm is a mechanical and electronics enclosure containing:
+
+- Motor driver.
+- Control board.
+- Power supply.
+- Sensor connections.
+- Wiring channels.
+- Selector actuator.
+- Ball collection assemblies.
+
+Exterior finish: brushed stainless-steel front, black powder-coated sides and a small amber indicator.
+
+## 4.6 Rear construction
+
+The rear should not be an empty flat panel.
+
+Include:
+- Removable metal service cover.
+- Six to eight recessed fasteners.
+- Narrow ventilation slots near the bottom.
+- Power inlet.
+- Main power switch.
+- Internal wiring access.
+- Small inspection hatch for the selector actuator.
+
+The rear should look like a real manufactured machine.
+
+# 5. Internal mechanical architecture
+
+Divide the interior into five functional zones. Each zone should be a separate assembly with its own geometry and logical purpose.
+
+## ZONE 01 — Input assembly
+
+**Location:** Upper-left region of the enclosure.
+
+**Purpose:** Accept one steel ball and release exactly one ball into the track.
+
+Components:
+- Small loading hopper.
+- Ball holding chamber.
+- Two-stage escapement.
+- Upper retaining gate.
+- Lower release gate.
+- Small spring-loaded actuator.
+- Ball detection sensor.
+
+The two-stage escapement prevents multiple balls from entering simultaneously.
+
+The upper gate retains the next ball while the lower gate releases the current ball. The gates must be mechanically interlocked so they cannot create an uncontrolled multi-ball release.
+
+## ZONE 02 — Gravity track
+
+The track is the main visual component.
+
+Construction:
+- Laser-cut and folded 304 stainless steel.
+- 22–24 mm internal channel width.
+- 8–12 mm side walls.
+- Smooth rounded bends.
+- Small mounting brackets.
+- M3/M4 fasteners.
+
+The track consists of three descending horizontal runs connected by two 180-degree curved turns.
+
+Each section is slightly inclined. The ball must remain constrained by the rail throughout the entire path.
+
+Do not use disconnected track segments, sharp corners or unsupported gaps.
+
+## ZONE 03 — Random decision selector
+
+**Location:** Lower central section.
+
+This is the functional heart of the Chaos Chamber.
+
+Components:
+- Two-way branching track.
+- Pivoting metal diverter.
+- Horizontal pivot shaft.
+- Small geared servo or linear actuator.
+- Position sensors.
+- Mechanical hard stops.
+- Return spring.
+
+The diverter has two positions:
+
+- LEFT: routes the ball to YES.
+- RIGHT: routes the ball to NO.
+
+The control system selects the result before the ball reaches the fork. It then positions the gate and holds that position. The ball follows the chosen route under gravity.
+
+The decision must be determined once per cycle, not changed midway through the ball's journey.
+
+## ZONE 04 — Output assembly
+
+Two separate output channels lead to two small front collection compartments.
+
+- Left pocket: YES.
+- Right pocket: NO.
+
+Each compartment includes:
+- Transparent front inspection window.
+- Metal catch surface.
+- Rubber impact pad.
+- Ball-presence sensor.
+- Dedicated amber indicator light.
+
+Both labels can remain permanently visible. The ball's final position determines the answer. Only the selected output illuminates.
+
+## ZONE 05 — Electronics
+
+Hidden behind the lower mechanism and rear panel.
+
+Components:
+- Microcontroller.
+- Motor driver.
+- Gate actuator driver.
+- Infrared ball sensors.
+- Position feedback switches.
+- LED control.
+- Power regulation.
+- Cable management.
+
+Electronics should be mounted to a physical tray or bracket. Wires should be routed through channels and should not float or cross moving mechanisms.
+
+# 6. Exact ball travel path
+
+The ball path must be continuous, smooth and collision-safe.
+
+The following coordinates are front-view guide points, not rigid straight-line connections.
+
+| Point | Approx. X | Approx. Y | Event |
+|---|---:|---:|---|
+| P0 | -145 mm | 590 mm | Input cradle |
+| P1 | +145 mm | 560 mm | End of upper run |
+| P2 | +145 mm | 525 mm | Right U-turn |
+| P3 | -145 mm | 495 mm | End of middle run |
+| P4 | -145 mm | 460 mm | Left U-turn |
+| P5 | +145 mm | 430 mm | End of lower run |
+| P6 | +85 mm | 390 mm | Exit curve |
+| P7 | +35 mm | 350 mm | Selector approach |
+| P8 | 0 mm | 325 mm | Two-way selector |
+| P9 | -75 / +75 mm | 255 mm | Selected YES/NO channel |
+| P10 | -75 / +75 mm | 190 mm | Final collection pocket |
+
+Use smooth curve transitions between points. These coordinates must be reconciled with the final CAD dimensions and track clearances.
+
+Track requirements:
+- Typical straight-run inclination: 5–8 degrees downward.
+- Smooth 180-degree transitions.
+- Minimum bend radius: approximately 26 mm.
+- No sharp corners.
+- No exposed gaps between rail sections.
+- Slightly raised retaining lip around every bend.
+- Ball clearance sufficient to prevent binding without excessive lateral wobble.
+
+Use an 18 mm diameter polished steel sphere. Its rotation must correspond to actual distance travelled, rather than spinning independently.
+
+For ideal rolling without slipping:
+
+```text
+radius = 9 mm
+angular_rotation = travelled_distance / radius
+```
+
+# 7. Product material and finish specification
+
+| Component | Material | Finish |
+|---|---|---|
+| Side panels | Walnut veneer | Satin clear coat |
+| Structural posts | Aluminium or stainless steel | Brushed silver |
+| Internal backing | Steel sheet | Matte charcoal |
+| Gravity tracks | 304 stainless steel | Satin/polished contact surface |
+| Steel ball | Hardened stainless steel | High polish |
+| Front window | Low-iron tempered glass | Clear |
+| Track brackets | Stainless steel | Satin |
+| Screws | Stainless steel | Natural metal |
+| Selector | Stainless steel | Satin |
+| Rubber pads | EPDM | Matte black |
+| Indicators | Amber LED | Diffused |
+| Lower chassis | Folded steel | Brushed metal / black |
+
+Avoid excessive gold, bronze or glowing orange components. A restrained quantity of warm metal accents is sufficient.
+
+# 8. Multi-view reference photography requirements
+
+All reference images must depict exactly the same machine with the same dimensions, proportions and component arrangement.
+
+Generate the following as separate images, not as a single collage:
+
+1. Front three-quarter hero view: approximately 30 degrees to the left and slightly above the centreline.
+2. Front orthographic elevation: camera perpendicular to the front glass, no perspective distortion.
+3. Left orthographic elevation: cabinet thickness, glass offset, track depth, hinges and rear panel.
+4. Right orthographic elevation: right-side cabinet construction, latch and service access.
+5. Rear orthographic elevation: service panel, screws, power inlet, vents and wiring access.
+6. Top orthographic plan: total depth, glass position, track position and side panels.
+7. Front cutaway: remove front glass and retaining frame only; expose the complete mechanism.
+8. Exploded axonometric assembly: separate enclosure, glass, track, escapement, selector, output pockets and electronics.
+9. Input escapement close-up.
+10. S-track and U-turn close-up.
+11. Selector mechanism close-up.
+12. Output collection pocket close-up.
+
+## 8.1 Master image-reference prompt
+
+Use this identity prompt with each individual view description:
+
+> Create a consistent industrial product design reference for the CHAOS CHAMBER CC-01, a premium tabletop electromechanical gravity-track decision machine.
+>
+> The product is 420 mm wide, 730 mm tall and 250 mm deep. It has dark walnut vertical side panels, a brushed stainless-steel front frame, a large transparent front glass panel, a matte charcoal internal backing, a clearly visible three-level descending S-shaped stainless-steel gravity track, a compact lower mechanical base and two separate YES and NO output compartments.
+>
+> Exactly one 18 mm polished steel ball enters through a single-ball upper-left input escapement. It follows one continuous descending three-run serpentine track with two smooth 180-degree turns. A lower central two-way mechanical pivot diverter routes the ball to either the left YES collection pocket or the right NO collection pocket.
+>
+> Show realistic manufacturable construction: actual sheet-metal thickness, mounting brackets, fasteners, bearings, hinges, glass gaskets, mechanical clearances and physically connected actuators.
+>
+> Use walnut veneer, brushed 304 stainless steel, matte charcoal powder-coated steel, low-iron glass, polished steel and black EPDM.
+>
+> Professional industrial product photography, physically plausible construction, precise geometry and realistic materials.
+>
+> This must always represent the exact same product. Do not alter dimensions, track location, glass proportions, cabinet proportions or component positions between reference views. Do not invent alternative designs, fantasy machinery or decorative steampunk details.
+
+Generate each viewpoint separately while retaining the same design reference. These images are visual modelling references, not dimensionally guaranteed CAD drawings.
+
+# 9. Detailed animation and rig specification
+
+Every animated component must have a defined role, pivot point, movement type, limits and trigger condition.
+
+| Component | Movement | Behaviour |
+|---|---|---|
+| Start button | Linear | Pushes inward 2–3 mm |
+| Upper escapement | Linear | Slides 12–18 mm |
+| Ball retaining pin | Linear | Retracts to release ball |
+| Steel ball | Rolling rigid body | Follows continuous track |
+| Gearmotor | Rotation | Drives selector |
+| Selector cam | Rotation | Moves to chosen detent |
+| Diverter gate | Angular | Moves between two positions |
+| Output gate | Angular | Opens and closes |
+| Result LEDs | Emissive | Selected output illuminates |
+| Status indicator | Emissive | Pulses during operation |
+
+Static components:
+- Exterior wooden enclosure.
+- Main metal frame.
+- Front glass.
+- Fixed track supports.
+- Fixed track sections.
+- Rear backing plate.
+- Table, wall and lamp.
+
+Do not animate decorative gears without a mechanical connection.
+
+## 9.1 Mechanical input sequence
+
+1. Ball is loaded into upper holding chamber.
+2. Upper gate retains remaining balls.
+3. Lower gate opens.
+4. One ball drops into launch cradle.
+5. Lower gate closes.
+6. Upper gate releases the next ball into holding chamber.
+
+For the single-ball demonstration, only one ball needs to be loaded.
+
+## 9.2 Gravity track movement
+
+Treat the ball as a rigid body.
+
+Its rotation must follow the distance travelled. For an 18 mm ball, radius is 9 mm, and ideal rolling rotation is travelled distance divided by radius.
+
+Requirements:
+- Gravity accelerates the ball down each ramp.
+- Friction limits excessive speed.
+- Ball-wall collision produces realistic rotational changes.
+- U-turn transitions maintain contact.
+- The ball never clips through the track.
+- No teleporting between track sections.
+
+## 9.3 Random selector
+
+The selector contains:
+- Pivot shaft: approximately 4 mm.
+- Diverter plate: approximately 2 mm stainless steel.
+- Plate width: approximately 25 mm.
+- Two hard stops.
+- Small geared actuator.
+- Linkage rod.
+- Return spring.
+- Two position sensors.
+
+The diverter rotates approximately 18–22 degrees between its two positions.
+
+The actuator positions the gate while the ball is still travelling along the upper track. The ball then encounters the appropriate guide surface and rolls down the selected outlet.
+
+Do not apply an artificial sideways force to the ball.
+
+## 9.4 Output sequence
+
+1. Ball leaves selected branch.
+2. Ball enters inclined guide.
+3. Ball contacts rubber-backed stopping plate.
+4. Ball settles into collection pocket.
+5. Presence sensor activates.
+6. Corresponding YES or NO indicator illuminates.
+
+The non-selected pocket stays unlit.
+
+# 10. Complete 12-second animation timeline
+
+Use one continuous fixed-camera shot in vertical 9:16 format.
+
+| Time | Action |
+|---|---|
+| 0.00–0.60 s | Immediate hook: steel ball drops into upper launch cradle; retaining pin snaps shut; amber light pulses |
+| 0.60–1.30 s | Release gate retracts; ball enters first track |
+| 1.30–4.80 s | Ball follows all three descending S-track runs and two hairpin bends |
+| 4.80–6.20 s | Random selector positions its diverter |
+| 6.20–8.00 s | Ball reaches fork and takes selected YES or NO branch |
+| 8.00–9.50 s | Ball enters selected collection pocket and settles |
+| 9.50–10.30 s | Selected indicator illuminates |
+| 10.30–12.00 s | Machine holds final result pose |
+
+The camera stays sufficiently wide to show the complete ball journey. No cuts, orbiting, aggressive zooms or handheld shake.
+
+# 11. Audio design for later video production
+
+Suggested mechanical sound layers:
+- Motor startup hum.
+- Solenoid click.
+- Ball rolling and metallic contact.
+- Subtle ball-to-rail impacts.
+- Gate actuation.
+- Mechanical selector detent.
+- Ball collection impact.
+- Result confirmation click.
+
+Do not add explosions, electrical zaps, exaggerated machinery or fantasy sound effects.
+
+The final sound should communicate a small, precise physical machine completing a mechanical operation.
+
+# 12. 3D modelling hierarchy
+
+Use the following object and assembly structure:
+
+```text
+CHAOS_CHAMBER_ROOT
+│
+├── ENVIRONMENT_REFERENCE
+│   ├── TABLE
+│   ├── BACK_WALL
+│   └── WALL_LIGHT
+│
+├── HOUSING
+│   ├── WALNUT_LEFT
+│   ├── WALNUT_RIGHT
+│   ├── METAL_FRAME
+│   ├── FRONT_GLASS
+│   ├── REAR_PANEL
+│   ├── TOP_HEADER
+│   └── BASE_CHASSIS
+│
+├── INPUT_ASSEMBLY
+│   ├── LOADING_HOPPER
+│   ├── UPPER_RETAINER
+│   ├── LOWER_RELEASE_GATE
+│   ├── RELEASE_ACTUATOR
+│   └── START_BUTTON
+│
+├── TRACK_ASSEMBLY
+│   ├── TRACK_RUN_01
+│   ├── TRACK_TURN_01
+│   ├── TRACK_RUN_02
+│   ├── TRACK_TURN_02
+│   ├── TRACK_RUN_03
+│   └── EXIT_GUIDE
+│
+├── BALL_ASSEMBLY
+│   └── STEEL_BALL_01
+│
+├── RANDOM_SELECTOR
+│   ├── SELECTOR_MOTOR
+│   ├── SELECTOR_CAM
+│   ├── PIVOT_SHAFT
+│   ├── DIVERTER_GATE
+│   ├── LEFT_GUIDE
+│   └── RIGHT_GUIDE
+│
+├── OUTPUT_ASSEMBLY
+│   ├── YES_CHANNEL
+│   ├── NO_CHANNEL
+│   ├── YES_POCKET
+│   ├── NO_POCKET
+│   ├── YES_INDICATOR
+│   └── NO_INDICATOR
+│
+└── ELECTRONICS
+    ├── CONTROLLER
+    ├── SENSORS
+    └── WIRING
+```
+
+Use separate objects or assemblies for every major physical component. Moving components must have correct origins and pivot positions.
+
+# 13. Geometry and modelling methodology
+
+| Component | Recommended modelling method |
+|---|---|
+| Walnut panels | Solid rectangular panels with bevelled edges |
+| Outer frame | Extruded metal profiles |
+| Glass | Thin solid glass with physical thickness |
+| S-track | Swept U-channel geometry |
+| U-turns | Smooth swept curves |
+| Ball | High-resolution UV sphere |
+| Gate | Separate metal plate with pivot |
+| Shafts | Cylinders with bearings |
+| Gear train | Individual gear meshes |
+| Springs | Helical curves with actual thickness |
+| Bolts | Separate reusable hardware |
+| Output pockets | Sheet-metal enclosure and transparent windows |
+| Rubber pads | Separate soft-material meshes |
+
+Do not:
+- Use flat planes to represent thick metal.
+- Use textures to fake large mechanical components.
+- Join moving parts into the main chassis.
+- Put pivots at arbitrary object origins.
+- Allow geometry intersections between the ball and rails.
+- Use generic decorative gears without mechanical connections.
+
+Detail should be purposeful. Include fasteners, washers, bearing housings, rubber isolators, mechanical stops, mounting holes, connector housings and correctly routed wires.
+
+# 14. PBR material requirements
+
+Use physically based materials with appropriate texture maps and realistic roughness.
+
+| Material | Key rendering characteristics |
+|---|---|
+| Walnut | Directional grain, satin finish, subtle pores |
+| Brushed steel | Anisotropic-looking linear brushing, restrained reflections |
+| Charcoal metal | Matte powder coating |
+| Glass | Actual thickness, low tint, accurate reflections and refraction |
+| Steel ball | High-polish reflection with restrained roughness |
+| Rubber | Dark, matte, slightly rough |
+| Amber indicator | Controlled emissive glow, not excessive bloom |
+
+Use high-quality scanned textures where possible. UV orientation must follow the grain direction. Use normal and roughness maps to reveal surface detail rather than relying on extreme bump values.
+
+# 15. Production deliverables
+
+| Deliverable | Required format |
+|---|---|
+| Editable project | `.blend` |
+| Production asset | `.glb` |
+| Major mechanical assemblies | Separate objects |
+| Moving components | Independently rigged |
+| Exterior materials | PBR |
+| Track and selector | Animation-ready |
+| Ball animation | Continuous path or rigid-body simulation |
+| YES and NO states | Both supported |
+| Orthographic renders | Front, left, right, rear and top |
+| Cutaway render | Front internal view |
+| Exploded assembly | Axonometric |
+| Hero product render | Three-quarter front |
+| Animation | 12-second master sequence |
+
+# 16. Production validation checklist
+
+Before calling the model complete, verify every item:
+
+- Overall dimensions and proportions match the specification.
+- Front, side, rear and top views agree.
+- Front glass has actual thickness and mounting hardware.
+- S-track is one continuous collision-safe path.
+- Ball travels through every bend without clipping.
+- Input escapement releases exactly one ball.
+- Selector has two real positions and two separate exits.
+- YES and NO pockets are physically separate.
+- All animated objects have correct pivot origins.
+- Materials use appropriate PBR maps and roughness.
+- No decorative components float or intersect.
+- Complete scene is organised and ready for animation.
+
+# 17. Recommended production stages
+
+## Pass 1 — Industrial blockout
+Build exterior proportions, glass, S-track, input, selector and output locations. Validate all orthographic views before detailed modelling.
+
+## Pass 2 — Mechanical construction
+Build escapement, selector, ball channels, actuators, supports, screws and service components. Test the entire ball trajectory.
+
+## Pass 3 — Visual production
+Add walnut, metal, glass, PBR materials, lighting, rigging and final animation.
+
+## Pass 4 — Mechanical and visual QA
+Test clearances, pivots, ball continuity, both selector states, camera visibility, shadows, reflections and final output.
+
+---
+
+# FINAL DESIGN PRINCIPLE
+
+The Chaos Chamber should be a believable physical product first and a cinematic object second.
+
+Its visual signature must remain the transparent glass front, dark walnut enclosure, brushed-metal frame, descending S-track and polished steel ball.
+
+Mechanical accuracy, physical continuity, manufacturable details, realistic materials and consistent product geometry take priority over decorative complexity.
+
+A simple machine whose parts actually work will look more convincing than a highly detailed machine with impossible mechanics.

@@ -1,0 +1,17 @@
+{
+  "group": "input",
+  "filepath": "L:\\coding\\YOUTUBE\\blenderr\\code-python\\outputs\\isolate\\input\\002.png",
+  "framing": {
+    "center_m": [
+      -0.13828,
+      -0.0315,
+      0.631
+    ],
+    "span_m": [
+      0.06855,
+      0.105,
+      0.094
+    ],
+    "distance_m": 0.28409
+  }
+}

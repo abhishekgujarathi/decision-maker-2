@@ -1,0 +1,533 @@
+{
+  "passed": true,
+  "tolerance_mm": 2.0,
+  "envelope": {
+    "width": 420.0,
+    "height": 730.0,
+    "depth": 250.0,
+    "min_world": [
+      -210.0,
+      -125.0,
+      0.0
+    ],
+    "max_world": [
+      210.0,
+      125.0,
+      730.0
+    ]
+  },
+  "checks": [
+    {
+      "name": "coordinate_convention",
+      "actual": {
+        "world_up": "Z",
+        "world_front": "-Y",
+        "authoring_up": "Y",
+        "authoring_front": "+Z"
+      },
+      "expected": "Z-up / front -Y; authoring Y-up / front +Z",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "world_envelope",
+      "actual": {
+        "width": 420.0,
+        "height": 730.0,
+        "depth": 250.0,
+        "min_world": [
+          -210.0,
+          -125.0,
+          0.0
+        ],
+        "max_world": [
+          210.0,
+          125.0,
+          730.0
+        ]
+      },
+      "expected": {
+        "width": 420.0,
+        "height": 730.0,
+        "depth": 250.0
+      },
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "track_width",
+      "actual": 23.0,
+      "expected": "22-24",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "track_wall_height",
+      "actual": 10.0,
+      "expected": "8-12",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "u_turn_radius",
+      "actual": 30.0,
+      "expected": "26-32",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "track_continuity",
+      "actual": {
+        "point_count": 168,
+        "max_step": 10.798
+      },
+      "expected": "<= 20 mm",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "track_run_slopes",
+      "actual": [
+        5.906,
+        5.906,
+        5.906
+      ],
+      "expected": "5-8 degrees",
+      "passed": true,
+      "units": "degrees"
+    },
+    {
+      "name": "ball_diameter",
+      "actual": 18.0,
+      "expected": "18 mm",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "ball_track_clearance",
+      "actual": {
+        "track_width": 23.0,
+        "ball_diameter": 18.0,
+        "side_clearance": 5.0
+      },
+      "expected": ">= 4 mm side clearance",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "track_inside_chamber",
+      "actual": {
+        "x_range": [
+          -190.0,
+          190.0
+        ],
+        "y_range": [
+          40.0,
+          690.0
+        ]
+      },
+      "expected": "all centreline samples inside chamber",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "ball_path_continuity",
+      "actual": {
+        "point_count": 221,
+        "max_step": 10.798
+      },
+      "expected": "<= 20 mm",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "ball_path_objects",
+      "actual": {
+        "STEEL_BALL_PATH_TEST": true,
+        "BALL_CENTRE_PATH": true,
+        "INPUT_LAUNCH_CRADLE": true,
+        "YES_BRANCH": true,
+        "NO_BRANCH": true,
+        "DIVERTER_GATE": true
+      },
+      "expected": "all required path objects present",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "selector_branch_separation",
+      "actual": {
+        "yes_max_x": 20.0,
+        "no_min_x": 20.0
+      },
+      "expected": "YES <= pivot <= NO",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "input_assembly_detail",
+      "actual": {
+        "hopper_rim": true,
+        "throat_collar": true,
+        "holding_chamber": true,
+        "upper_gate": true,
+        "lower_gate": true,
+        "interlock": true,
+        "sensor_datum": true,
+        "launch_bridge": true
+      },
+      "expected": "hopper, chamber, gates, interlock, sensor, cradle present",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "holding_capacity_and_spacing",
+      "actual": {
+        "capacity_balls": 2,
+        "spacing_mm": 22.5
+      },
+      "expected": "capacity >= 2; spacing >= ball diameter + 2 mm",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "escapement_gate_travel",
+      "actual": {
+        "upper_mm": 15.0,
+        "lower_mm": 15.0,
+        "independent_hard_stops": true
+      },
+      "expected": "both gates have positive travel and stops",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "one_ball_release_interlock",
+      "actual": {
+        "interlock_logic": "upper retainer and lower release cannot be open together",
+        "gate_spacing_mm": 22.5
+      },
+      "expected": "mutual exclusion between retainer and release",
+      "passed": true,
+      "units": "mm"
+    },
+    {
+      "name": "output_pocket_rest_and_sensor",
+      "actual": {
+        "YES": {
+          "objects": {
+            "catch": true,
+            "pad": true,
+            "sensor": true,
+            "receiver": true,
+            "beam": true
+          },
+          "rest_datum_mm": [
+            -78.0,
+            170.92427726609617,
+            72.75
+          ],
+          "aligned": true
+        },
+        "NO": {
+          "objects": {
+            "catch": true,
+            "pad": true,
+            "sensor": true,
+            "receiver": true,
+            "beam": true
+          },
+          "rest_datum_mm": [
+            78.0,
+            170.92427726609617,
+            72.75
+          ],
+          "aligned": true
+        }
+      },
+      "expected": "inclined rubber-faced rest and beam through BALL_Z",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "output_branch_entry_alignment",
+      "actual": {
+        "YES": {
+          "branch_endpoint_mm": [
+            -78.0,
+            245.0,
+            63.0
+          ],
+          "slot_width_mm": 26.0,
+          "aligned": true
+        },
+        "NO": {
+          "branch_endpoint_mm": [
+            78.0,
+            245.0,
+            63.0
+          ],
+          "slot_width_mm": 26.0,
+          "aligned": true
+        }
+      },
+      "expected": "branch endpoint at entry slot and >= 22 mm bore",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "electronics_mounting",
+      "actual": {
+        "tray_bounds_mm": [
+          [
+            -150.00000596046448,
+            150.00000596046448
+          ],
+          [
+            52.49999836087227,
+            107.50000178813934
+          ],
+          [
+            43.49999874830246,
+            46.50000110268593
+          ]
+        ],
+        "assemblies": {
+          "CONTROL_BOARD": {
+            "board_x_y_bounds_mm": [
+              [
+                -115.99999666213989,
+                -24.000000208616257
+              ],
+              [
+                59.99999865889549,
+                100.00000149011612
+              ]
+            ],
+            "mount_count": 4,
+            "within_tray": true,
+            "standoffs_bridge_board_to_tray": true
+          },
+          "MOTOR_DRIVER": {
+            "board_x_y_bounds_mm": [
+              [
+                23.000000044703484,
+                76.99999958276749
+              ],
+              [
+                59.99999865889549,
+                100.00000149011612
+              ]
+            ],
+            "mount_count": 4,
+            "within_tray": true,
+            "standoffs_bridge_board_to_tray": true
+          },
+          "POWER_SUPPLY": {
+            "board_x_y_bounds_mm": [
+              [
+                90.00000357627869,
+                150.00000596046448
+              ],
+              [
+                57.999998331069946,
+                90.00000357627869
+              ]
+            ],
+            "mount_count": 4,
+            "within_tray": true,
+            "standoffs_bridge_board_to_tray": true
+          }
+        }
+      },
+      "expected": "three electronics assemblies inside tray with four tray-to-board standoffs each",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "track_phase2_groups",
+      "actual": [
+        "TRACK_BRACKETS",
+        "TRACK_EXIT_GUIDE_01",
+        "TRACK_EXIT_GUIDE_02",
+        "TRACK_EXIT_GUIDE_CONTINUOUS",
+        "TRACK_FASTENERS",
+        "TRACK_RUN_01",
+        "TRACK_RUN_02",
+        "TRACK_RUN_03",
+        "TRACK_UTURN_01",
+        "TRACK_UTURN_02",
+        "TRACK_UTURN_03"
+      ],
+      "expected": [
+        "TRACK_BRACKETS",
+        "TRACK_EXIT_GUIDE_01",
+        "TRACK_EXIT_GUIDE_02",
+        "TRACK_EXIT_GUIDE_CONTINUOUS",
+        "TRACK_FASTENERS",
+        "TRACK_RUN_01",
+        "TRACK_RUN_02",
+        "TRACK_RUN_03",
+        "TRACK_UTURN_01",
+        "TRACK_UTURN_02",
+        "TRACK_UTURN_03"
+      ],
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "ball_assembly_collection",
+      "actual": {
+        "present": true,
+        "objects": 2
+      },
+      "expected": "BALL_ASSEMBLY with path-test ball",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "component_identifiers",
+      "actual": [
+        "CC-100",
+        "CC-210",
+        "CC-220",
+        "CC-310",
+        "CC-340",
+        "CC-420",
+        "CC-530",
+        "CC-610",
+        "CC-620",
+        "CC-700"
+      ],
+      "expected": "CC-210/220/310/420/530/610 present",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "service_access",
+      "actual": {
+        "objects": {
+          "REAR_SERVICE_COVER": true,
+          "SELECTOR_SERVICE_HATCH": true,
+          "POWER_INLET": true,
+          "MAIN_SWITCH": true
+        },
+        "rear_fastener_count": 12
+      },
+      "expected": "rear cover, hatch, inlet, switch, >= 6 rear fasteners",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "assembly_metadata",
+      "actual": {
+        "revision": "P2.1",
+        "units": "mm",
+        "coordinate_convention": "Z-up / front -Y / X left-right"
+      },
+      "expected": "P2.1 / mm / Z-up front -Y",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "named_datums",
+      "actual": [
+        "ball_plane_z",
+        "enclosure_center",
+        "gate_pivot",
+        "gate_travel_mm",
+        "glass_inner_face_world_y",
+        "glass_outer_face_world_y",
+        "input_centerline",
+        "no_pocket_center",
+        "plate_front_z",
+        "queue_datum_lower_y",
+        "queue_datum_upper_y",
+        "selector_pivot",
+        "track_floor_z",
+        "yes_pocket_center"
+      ],
+      "expected": [
+        "ball_plane_z",
+        "enclosure_center",
+        "gate_pivot",
+        "gate_travel_mm",
+        "glass_inner_face_world_y",
+        "glass_outer_face_world_y",
+        "input_centerline",
+        "no_pocket_center",
+        "plate_front_z",
+        "queue_datum_lower_y",
+        "queue_datum_upper_y",
+        "selector_pivot",
+        "track_floor_z",
+        "yes_pocket_center"
+      ],
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "dimension_tolerance_table",
+      "actual": [
+        "ball_diameter",
+        "enclosure_envelope",
+        "glass_clearance_min",
+        "selector_stop_angle",
+        "track_width"
+      ],
+      "expected": "reusable Phase 2 nominal tolerance table",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "production_component_ids",
+      "actual": [
+        "CC-100",
+        "CC-210",
+        "CC-220",
+        "CC-310",
+        "CC-340",
+        "CC-420",
+        "CC-530",
+        "CC-610",
+        "CC-620",
+        "CC-700"
+      ],
+      "expected": [
+        "CC-100",
+        "CC-210",
+        "CC-310",
+        "CC-340",
+        "CC-420",
+        "CC-530",
+        "CC-610",
+        "CC-620",
+        "CC-700"
+      ],
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "editable_production_objects",
+      "actual": {
+        "count": 212,
+        "missing_component_ids": []
+      },
+      "expected": "all production objects named and data-backed",
+      "passed": true,
+      "units": ""
+    },
+    {
+      "name": "glass_clearance",
+      "actual": {
+        "clearance": 3.0,
+        "frontmost_object": "OUTPUT_DIVIDER",
+        "glass_inner_y": -98.0,
+        "frontmost_y": -95.0
+      },
+      "expected": ">= 3 mm",
+      "passed": true,
+      "units": "mm"
+    }
+  ]
+}
